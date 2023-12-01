@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" type="text/css" href="vienas.css">
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+    <script src="coffescript.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-oR2A9iJKs1V4Ck6v4+6U6i5H8eheX2SO+TzukVrflKlDl5JHIIdT9/Ayk5IGrZd6" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Quick contacts -->
+    <div class="header">
+        <div class="contact-info">
+          <span class="email">vardas.pavarde@stud.vilniustech.lt</span>
+          <span class="phone">+3701234567</span>
+        </div>
+        <div class="social-icons">
+          <a href="https://twitter.com/Markzukerberg" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+          <a href="https://facebook.com/zuck" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+          <a href="https://instagram.com/zuck" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </div>
+    <!-- Navigacijos meniu -->
+    <div class="nav-container">
+        <nav>
+          <p class="logo">GREEN</p>
+          <ul>
+            <li><a href="Main.html">Home</a></li>
+            <li><a href="#" onclick="scrollToSection(event, 'about')">About</a></li>
+            <li><a href="#" onclick="scrollToSection(event, 'resume')">Resume</a></li>
+            <li><a href="#" onclick="scrollToSection(event, 'contact')">Contact</a></li>
+          </ul>
+        </nav>
+    </div>
+      
+    <!-- Night City Photo -->
+    <div class="container">
+        <img src="night.jpg" alt="Your Image" class="full-width-image">
+        <div class="overlay-content">
+          <h1>Here you will find my CV</h1>
+          <a href="apie.html" class="button">More Information</a>
+        </div>
+    </div>
+
+
+    <main>
+        <!-- "About" -->
+        <section id="about">
+          <h2 class="center-text">ABOUT ME</h2>
+          <div class="divider-container">
+            <div class="green-line"></div>
+            <div class="divider-line"></div>
+          </div>    
+          <h2 class="center-text-smaller">Here you will find information about myself.</h2>      
+          <div class="about-content">
+            <div class="text">
+              <div class="text-heading">
+                <p>Mano vardas Dmitrijs Popovs, ir aš esu studentas, studijuojantis Elektros Energetikos Inžinerija VILNIUS TECH universitete.</p>
+              </div>
+              <div class="text-main-about">
+                <p>Mano savybės, kurios mane išskiria, yra mano didelis darbštumas ir atkaklumas. Nesvarbu, ar tai yra sudėtinga užduotis ar iššūkis, aš visada stengiuosi rasti efektyvų sprendimą. Mano įsipareigojimas darbui ir kolektyvui padeda man lengvai integruotis į bet kokią darbo aplinką.</p>
+                <p>Viena iš mano pagrindinių vertybių yra siekti pagerinti gyvenimą aplink mane. Mano studijų sritis leidžia man mąstyti apie elektros energijos inovacijas, kurios gali prisidėti prie visuomenės gerovės ir komforto. Be to, suprantu, kad užsidirbti pinigų yra svarbu, ir aš įsipareigojęs siekti finansinės sėkmės.</p>
+                <p>Nors man trūksta darbo patirties, aš atvirus naujovėms ir pasiruošęs mokytis bei tobulėti savo srityje. Esu įsitikinęs, kad su savo įgūdžiais, įsipareigojimu ir noru nuolat tobulėti, galiu prisidėti prie bet kurio projekto sėkmės.</p>
+              </div>
+            </div>
+            <div class="photo">
+              <img src="zuck.jpg" alt="About Zuck">
+            </div>
+          </div>
+        </section>
+
+        <!-- "Resume" -->
+        <section id="resume">
+          <h2 class="center-text">MY RESUME</h2>
+          <div class="divider-container">
+            <div class="green-line"></div>
+            <div class="divider-line"></div>
+          </div>    
+          <h2 class="center-text-smaller">Here you will find my resume.</h2>
+          
+          <div class="main-container-resume">
+            <div class="container-resume">
+              <div class="number">01</div>
+              <div class="resume-heading">Išsilavinimas:</div>
+              <div class="resume-text">
+                <p>Elektros Energetikos Inžinerija, VILNIUS TECH</p>
+                <p>Numatomas baigimas: 2026m.</p>
+                <p>Pagrindiniai kursai: Elektronikos pagrindai, Energetinės sistemos modeliavimas ir kt.</p>
+              </div>
+            </div>
+            <div class="container-resume">
+              <div class="number">02</div>
+              <div class="resume-heading">Įgūdžiai:</div>
+              <div class="resume-text">
+                <p>Techniniai: Žinios C, C++, HTML, CSS, JavaScript, MATLAB, Elektros tinklų projektavimas.</p>
+                <p>Minkštieji: Darbštumas, užsispyrimas, gebėjimas spręsti problemas, komunikabilumas.</p>
+              </div>
+            </div>
+            <div class="container-resume no-right-border">
+              <div class="number">03</div>
+              <div class="resume-heading">Projektai ir Pasiekimai:</div>
+              <div class="resume-text">
+                <p>Dalyvavimas projektuose apie Energetikos efektyvumo didinimas šiuolaikinėse technologijose.</p>
+                <p>Aktyvus dalyvavimas akademinėje veikloje: Organizavau ir koordinavau energijos efektyvumo seminarus studentams.</p>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div class="container-resume">
+              <div class="number">04</div>
+              <div class="resume-heading">Darbo Patirtis:</div>
+              <div class="resume-text">
+                <p>Įmonė "Energetikos Sprendimai"</p>
+                <p>Darbo laikotarpis: 2022 m. sausis - 2023 m. liepa</p>
+                <p>Pagrindinės pareigos: Dalyvavimas elektros tinklų projektavimo komandoje, analizė ir sprendimų siūlymas efektyvesnių energetikos sistemų kūrimui.</p>
+              </div>
+            </div>
+            <div class="container-resume">
+              <div class="number">05</div>
+              <div class="resume-heading">Papildomi Kursai ir Sertifikatai:</div>
+              <div class="resume-text">
+                <p>Elektros Energetikos Seminaras: Naujausios technologijos ir inovacijos.</p>
+                <p>Sertifikatas: Komunikacijos įgūdžiai profesinėje sferoje.</p>
+              </div>
+            </div>
+            <div class="container-resume no-right-border">
+              <div class="number">06</div>
+              <div class="resume-heading">Kalbų Įgūdžiai:</div>
+              <div class="resume-text">
+                <p>Rusų kalba - Gimtoji kalba;</p>
+                <p>Anglų kalba - Išskirtinai gerai, C1 lygis;</p>
+                <p>Lietuvių kalba - Vidutinis lygis;</p>
+              </div>
+            </div>
+          </div>
+
+        </section>
+    
+        <!-- "Contact" -->
+        <section id="contact">
+          <h2 class="center-text">CONTACT ME</h2>
+          <div class="divider-container">
+            <div class="green-line"></div>
+            <div class="divider-line"></div>
+          </div> 
+          <h2 class="center-text-smaller">Here you will find my contacts and you will be able to contact me personally.</h2>
+
+          <div class="contact-container">
+            <div class="left-container">
+              <div class="location-content">
+                <div class="location-marker">
+                    <img src="marker-icon.png" alt="Marker Icon">
+                </div>
+                <div class="location-text">
+                    <p class="large-bold">Location:</p>
+                    <p class="small">Saulėtekio al. 11, 10223 Vilnius</p>
+                </div>
+              </div>
+
+              <div class="letter-content">
+                <div class="letter-marker">
+                    <img src="email-icon.png" alt="Marker Icon">
+                </div>
+                <div class="letter-text">
+                    <p class="large-bold">Email:</p>
+                    <p class="small">vardas.pavarde@stud.vilniustech.lt</p>
+                </div>
+              </div>
+              
+              <div class="call-content">
+                <div class="call-marker">
+                    <img src="call-icon.png" alt="Marker Icon">
+                </div>
+                <div class="call-text">
+                    <p class="large-bold">Call:</p>
+                    <p class="small">+370 1234567</p>
+                </div>
+              </div>
+  
+              <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.2776367443626!2d25.33702326953212!3d54.72233111229639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd96e86a61f053%3A0xd4bb20eab67f9bf9!2sVilnius%20Gediminas%20Technical%20University%20(VILNIUS%20TECH)!5e0!3m2!1sru!2s!4v1700775065165!5m2!1sru!2s" 
+              width="600" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+            <div class="right-container">
+              <form action="#" method="post" id="contact-form">
+                <div class="label-input-group">
+                  <div class="input-row">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                  
+                  <div class="input-row">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                </div>
+        
+                <div class="ending-input-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" required>
+          
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+        
+                <button type="submit">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </section>
+    </main>
+
+    <!-- Bottom section -->
+    <div class="page-end">
+      <p class="green-text">GREEN</p>
+      <p class="normal-text">Brevis nobis vita data est, at memoria bene redditae vitae sempterna.</p>
+      <div class="social-icons-bottom">
+        <a href="https://twitter.com/Markzukerberg" target="_blank" class="icon1"><img src="twitter-icon-bottom.png" alt="Twitter"></a>
+        <a href="https://facebook.com/zuck" target="_blank" class="icon2"><img src="facebook-icon-bottom.png" alt="Facebook"></a>
+        <a href="https://instagram.com/zuck" target="_blank" class="icon3"><img src="instagram-icon-bottom.png" alt="Instagram"></a>
+      </div>
+      <p>&copy Copyright VILNIUS TECH. All Rights Reserved</p>
+      <p>Designed by Dmitrijs Popovs</p>
+      <print href="#" onclick="printPage()">Spausdinti</print>
+    </div>
+    
+    <!-- Button to scroll to the top -->
+    <div class="scroll-to-top">
+        <a href="#" class="scroll-button" id="scrollButton">&#9650;</a>
+    </div>    
+
+    <script>
+      function printPage() {
+        window.print(); 
+      }
+    </script>
+</body>
+</html>

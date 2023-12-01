@@ -1,0 +1,15 @@
+  body {
+    font-family: 'serif';
+    text-align: left;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  @media print {
+    body {
+      font-size: 12pt;
+      text-align: left;
+    }
+  }
