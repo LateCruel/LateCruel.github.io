@@ -59,3 +59,60 @@
     };
   });
   /* ------------------- */
+
+  function submitForm() {
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const studentId = document.getElementById("studentId").value;
+
+    if (!/^\d+$/.test(studentId)) {
+      alert("Pažymėjimo numeris turi būti sudarytas tik iš skaičių!");
+      return;
+    }
+
+    const gradeInputs = document.querySelectorAll('[id^="grade"]');
+
+    const grades = Array.from(gradeInputs).map(input => parseFloat(input.value));
+
+    if (grades.every(isNaN)) {
+      alert("Bent vienas pažymys turi būti įvestas!");
+      return;
+    }
+
+    if (!validateGrades(grades)) {
+      alert("Pažymiai turi būti nuo 1 iki 10!");
+      return;
+    }
+
+    const validGrades = grades.filter(grade => !isNaN(grade));
+
+    if (validGrades.length === 0) {
+      alert("Bent vienas pažymys turi būti įvestas!");
+      return;
+    }
+
+    const sum = validGrades.reduce((acc, grade) => acc + grade, 0);
+    const averageGrade = sum / validGrades.length;
+
+    let resultColorClass;
+    if (averageGrade <= 4) {
+      resultColorClass = "error";
+    } else if (averageGrade <= 8) {
+      resultColorClass = "warning";
+    } else {
+      resultColorClass = "success";
+    }
+
+    const resultContainer = document.getElementById("result");
+    resultContainer.innerHTML = `
+      <p>Average Mark: </p>
+      <p>${firstName} ${lastName} (${studentId}): <span class="${resultColorClass}">${averageGrade.toFixed(2)}</span></p>
+    `;
+  }
+  
+  function validateGrades(grades) {
+    return grades.every(grade => isNaN(grade) || (grade >= 1 && grade <= 10));
+  }
+  
+  
+  

@@ -16,6 +16,17 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
 
+    <style>
+      .error {
+        color: red;
+      }
+      .warning {
+        color: orange;
+      }
+      .success {
+        color: green;
+      }
+    </style>
 </head>
 <body>
     <!-- Quick contacts -->
@@ -236,26 +247,34 @@
               <form action="#" method="post" id="contact-form">
                 <div class="label-input-group">
                   <div class="input-row">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="firstName" class="student-identity1">Vardas:</label>
+                    <input type="text" id="firstName" name="firstName" required>
                   </div>
                   
                   <div class="input-row">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="lastName" class="student-identity1">Pavardė:</label>
+                    <input type="text" id="lastName" name="lastName" required>
                   </div>
                 </div>
         
+                <label for="studentId" class="student-identity">Pažymėjimo numeris:</label>
+                <input type="text" id="studentId" name="studentId" pattern="\d+" required>
+
                 <div class="ending-input-group">
-                  <label for="subject">Subject</label>
-                  <input type="text" id="subject" name="subject" required>
-          
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="4" required></textarea>
+
+                  <label for="grades" class="student-identity2">Pažymiai:</label>
+                  <input type="number" id="grade1" name="grades" min="1" max="10" required>
+                  <input type="number" id="grade2" name="grades" min="1" max="10" required>
+                  <input type="number" id="grade3" name="grades" min="1" max="10" required>
+                  <input type="number" id="grade4" name="grades" min="1" max="10" required>
+                  <input type="number" id="grade5" name="grades" min="1" max="10" required>
+
                 </div>
         
-                <button type="submit">Send Message</button>
+                <button type="button" onclick="submitForm()">Calculate</button>
               </form>
+
+              <div id="result" class="right-result"></div>
             </div>
           </div>
         </section>
