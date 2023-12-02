@@ -108,6 +108,8 @@
       <p>Average Mark: </p>
       <p>${firstName} ${lastName} (${studentId}): <span class="${resultColorClass}">${averageGrade.toFixed(2)}</span></p>
     `;
+
+    console.log(`${firstName} ${lastName} (${studentId}): <span class="${resultColorClass}">${averageGrade.toFixed(2)}</span>`.replace(/<\/?span[^>]*>/g, ""));
   }
   
   function validateGrades(grades) {
