@@ -703,13 +703,19 @@ nav ul li a:hover {
   }
 
   #formulas .asquare {
+    margin-top: 90px;
+    text-align: center;
+    font-size: 150%;
+  }
+
+  #formulas .matrix {
     margin-top: 60px;
     text-align: center;
     font-size: 150%;
   }
 
   object {
-    margin-top: 60px;
+    margin-top: 15px;
     width: 400px;
     height: auto; 
   }

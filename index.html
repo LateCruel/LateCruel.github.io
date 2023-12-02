@@ -35,9 +35,10 @@
         <nav>
           <p class="logo">GREEN</p>
           <ul>
-            <li><a href="Main.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#" onclick="scrollToSection(event, 'about')">About</a></li>
             <li><a href="#" onclick="scrollToSection(event, 'resume')">Resume</a></li>
+            <li><a href="#" onclick="scrollToSection(event, 'formulas')">Formulės ir SVG</a></li>
             <li><a href="#" onclick="scrollToSection(event, 'contact')">Contact</a></li>
           </ul>
         </nav>
@@ -155,6 +156,27 @@
             $$a^2 = b^2 + c^2$$
           </div>
 
+          <div class="matrix">
+            \[
+            \begin{pmatrix}
+              U(t) \\
+              V(t) \\
+              W(t)
+            \end{pmatrix}
+            =
+            \begin{pmatrix}
+              1 & 0 & 0 \\
+              0 & cosRt & -sinRt \\
+              0 & sinRt & cosRt
+            \end{pmatrix}
+            \begin{pmatrix}
+              U(0) \\
+              V(0) \\
+              W(0)
+            \end{pmatrix}
+            \]
+          </div>
+
           <object type="image/svg+xml" data="cheese1.svg"></object>
         </section>
 
@@ -267,7 +289,8 @@
     <script type="text/javascript">
       MathJax = {
         tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
         },
         svg: {
           fontCache: 'global'
