@@ -92,7 +92,8 @@
     }
 
     const sum = validGrades.reduce((acc, grade) => acc + grade, 0);
-    const averageGrade = sum / validGrades.length;
+    const averageGrade = Math.round(sum / validGrades.length).toString();
+
 
     let resultColorClass;
     if (averageGrade <= 4) {
@@ -106,10 +107,11 @@
     const resultContainer = document.getElementById("result");
     resultContainer.innerHTML = `
       <p>Average Mark: </p>
-      <p>${firstName} ${lastName} (${studentId}): <span class="${resultColorClass}">${averageGrade.toFixed(2)}</span></p>
+      <p>${firstName} ${lastName} (${studentId}): <span class="${resultColorClass}">${averageGrade}</span></p>
+
     `;
 
-    console.log(`${firstName} ${lastName} (${studentId}): <span class="${resultColorClass}">${averageGrade.toFixed(2)}</span>`.replace(/<\/?span[^>]*>/g, ""));
+    console.log(`${firstName} ${lastName} (${studentId}): <span class="${resultColorClass}">${averageGrade}</span>`.replace(/<\/?span[^>]*>/g, ""));
   }
   
   function validateGrades(grades) {
