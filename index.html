@@ -9,6 +9,13 @@
     <link rel="stylesheet" type="text/css" href="print.css" media="print">
     <script src="coffescript.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-oR2A9iJKs1V4Ck6v4+6U6i5H8eheX2SO+TzukVrflKlDl5JHIIdT9/Ayk5IGrZd6" crossorigin="anonymous">
+    <script type="text/javascript" async 
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async
+      id="MathJax-script"
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
 </head>
 <body>
     <!-- Quick contacts -->
@@ -138,6 +145,19 @@
 
         </section>
     
+        <section id="formulas">
+          <h2 class="center-text">FORMULĖS IR SVG</h2>
+          <div class="divider-container">
+            <div class="green-line"></div>
+            <div class="divider-line"></div>
+          </div> 
+          <div class="asquare">
+            $$a^2 = b^2 + c^2$$
+          </div>
+
+          <object type="image/svg+xml" data="cheese1.svg"></object>
+        </section>
+
         <!-- "Contact" -->
         <section id="contact">
           <h2 class="center-text">CONTACT ME</h2>
@@ -242,6 +262,17 @@
       function printPage() {
         window.print(); 
       }
+    </script>
+
+    <script type="text/javascript">
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
     </script>
 </body>
 </html>
